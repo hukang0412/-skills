@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📝 My To-Do List</h1>
+            <p class="subtitle">Stay organized and productive</p>
+        </header>
+
+        <div class="input-section">
+            <form id="todoForm">
+                <input 
+                    type="text" 
+                    id="todoInput" 
+                    placeholder="Add a new task..."
+                    required
+                >
+                <button type="submit" class="add-btn">Add Task</button>
+            </form>
+        </div>
+
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="active">Active</button>
+            <button class="filter-btn" data-filter="completed">Completed</button>
+        </div>
+
+        <div class="stats">
+            <span class="stat"><strong id="totalTasks">0</strong> Total</span>
+            <span class="stat"><strong id="activeTasks">0</strong> Active</span>
+            <span class="stat"><strong id="completedTasks">0</strong> Completed</span>
+        </div>
+
+        <ul id="todoList" class="todo-list"></ul>
+
+        <div class="actions">
+            <button id="clearCompleted" class="clear-btn">Clear Completed</button>
+            <button id="clearAll" class="clear-btn danger">Clear All</button>
+        </div>
+
+        <footer>
+            <p>Tasks are automatically saved to your browser's local storage</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
